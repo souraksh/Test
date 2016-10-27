@@ -56,6 +56,7 @@ Set Rng = Worksheets("Sheet2").Range("A2:R2000")
     Rng.HorizontalAlignment = xlCenter
     End With
     
+  'Delete rows if cells from D to I are empty
   For i = 1000 To 1 Step -1
     If WorksheetFunction.CountA(Range("D" & i, "I" & i)) = 0 Then
         Rows(i).EntireRow.Delete
